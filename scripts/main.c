@@ -1,9 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
 #include "Python.h"
-
 
 #define MAX_COMMAND 256
 
@@ -19,6 +14,7 @@ int main(int argc, char** argv){
 	char command[MAX_COMMAND];
 	char* args[MAX_COMMAND];
 	int run = 1;
+	init();
 	init_msg();	
 	while(run){
 		printf(">>> ");
@@ -33,18 +29,13 @@ int main(int argc, char** argv){
 			args[i++] = tokens;
 			tokens = strtok(NULL, " ");
 		}
-		
 		i = 0;	
-		while (keywords[i]){
-			if (strcmp(args[0], keywords[i]) && keywords[i] != NULL){
-				printf("Found: %s", keywords[i]);
+		while (i < KEYWORDS){
+			if (strstr(args[0], keywords[i])){
+				callFunction(args[0]);
 			}
 			i++;
 		} 
-
 	}
-
-
 	return 0;
-
 }

@@ -14,4 +14,4 @@ $(TARGET) : $(OBJS)
 all : $(TARGET)
 
 clean:
-	rm -f $
+	rm -f bin/*
