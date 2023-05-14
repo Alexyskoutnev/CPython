@@ -1,0 +1,23 @@
+# Object files
+*.o
+
+# Executables
+*.out
+
+# Libraries
+*.a
+*.so
+
+# Visual Studio Code
+.vscode/
+
+# macOS specific files
+.DS_Store
+
+# Compiled C++ Object files and executables
+*.gch
+*.pch
+
+# Backups and swap files
+*~
+.#*
