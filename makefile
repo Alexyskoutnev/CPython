@@ -1,8 +1,8 @@
 CC = gcc
-CFLAGS = -Wall -Werror -std=c11
+CFLAGS = -Wall -Werror -std=c11 -Iinclude
 
 TARGET = bin/main
-SRCS = scripts/main.c src/hello.c src/print.c src/parser.c
+SRCS = scripts/main.c src/hello.c src/print.c src/parser.c src/keywords.c
 OBJS = $(SRCS:.c=.o)
 
 %.o : %.c

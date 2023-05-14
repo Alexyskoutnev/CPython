@@ -21,3 +21,6 @@
 # Backups and swap files
 *~
 .#*
+
+
+/test
